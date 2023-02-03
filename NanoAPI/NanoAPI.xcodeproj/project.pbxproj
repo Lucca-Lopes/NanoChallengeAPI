@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */; };
+		DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */; };
+		DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8AC2298D9E7200438478 /* SetModel.swift */; };
 		DFEAAEEB298AFC2E00A98B8A /* NanoAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */; };
 		DFEAAEED298AFC2E00A98B8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */; };
 		DFEAAEEF298AFC2F00A98B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeModel.swift; sourceTree = "<group>"; };
+		DFDF8AC2298D9E7200438478 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
 		DFEAAEE7298AFC2E00A98B8A /* NanoAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoAPIApp.swift; sourceTree = "<group>"; };
 		DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DFDF8ABC298D8AC300438478 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */,
+				DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */,
+				DFDF8AC2298D9E7200438478 /* SetModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DFEAAEDE298AFC2E00A98B8A = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +67,7 @@
 		DFEAAEE9298AFC2E00A98B8A /* NanoAPI */ = {
 			isa = PBXGroup;
 			children = (
+				DFDF8ABC298D8AC300438478 /* Models */,
 				DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */,
 				DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */,
 				DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */,
@@ -137,6 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */,
+				DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */,
+				DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */,
 				DFEAAEED298AFC2E00A98B8A /* ContentView.swift in Sources */,
 				DFEAAEEB298AFC2E00A98B8A /* NanoAPIApp.swift in Sources */,
 			);
@@ -267,7 +287,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = V32Q5HA7F8;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -297,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = V32Q5HA7F8;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
