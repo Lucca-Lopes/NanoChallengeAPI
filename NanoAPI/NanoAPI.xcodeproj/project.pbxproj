@@ -14,6 +14,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43BEB31F2991759E00C6A7B0 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		43BEB3202991760500C6A7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DFEAAEE7298AFC2E00A98B8A /* NanoAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoAPIApp.swift; sourceTree = "<group>"; };
 		DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		DFEAAEDE298AFC2E00A98B8A = {
 			isa = PBXGroup;
 			children = (
+				43BEB31F2991759E00C6A7B0 /* Config.xcconfig */,
 				DFEAAEE9298AFC2E00A98B8A /* NanoAPI */,
 				DFEAAEE8298AFC2E00A98B8A /* Products */,
 			);
@@ -51,6 +54,7 @@
 		DFEAAEE9298AFC2E00A98B8A /* NanoAPI */ = {
 			isa = PBXGroup;
 			children = (
+				43BEB3202991760500C6A7B0 /* Info.plist */,
 				DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */,
 				DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */,
 				DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */,
@@ -147,6 +151,7 @@
 /* Begin XCBuildConfiguration section */
 		DFEAAEF3298AFC2F00A98B8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43BEB31F2991759E00C6A7B0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -207,6 +212,7 @@
 		};
 		DFEAAEF4298AFC2F00A98B8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43BEB31F2991759E00C6A7B0 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -270,6 +276,7 @@
 				DEVELOPMENT_TEAM = V32Q5HA7F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NanoAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,6 +307,7 @@
 				DEVELOPMENT_TEAM = V32Q5HA7F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NanoAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
