@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct NanoAPIApp: App {
+    
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
+            .environmentObject(vm)
         }
     }
 }

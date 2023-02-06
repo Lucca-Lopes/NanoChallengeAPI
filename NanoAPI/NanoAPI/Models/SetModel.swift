@@ -107,14 +107,14 @@ struct barcode {
 */
 
 // MARK: - Modelo do site
-struct WelcomeElement: Identifiable, Codable {
+struct SetModel: Identifiable, Codable {
     let id: Int
     let number: String
     let numberVariant: Int
     let name: String
     let year: Int
-    let theme: Theme
-    let themeGroup: ThemeGroup
+    let theme: String
+    let themeGroup: String
     let subtheme: String
     let category: Category
     let released: Bool
@@ -223,12 +223,12 @@ enum PackagingType: String, Codable {
     case polybag = "Polybag"
 }
 
-enum Theme: String, Codable {
-    case starWars = "Star Wars"
-}
+//enum Theme: String, Codable {
+//    case starWars = "Star Wars"
+//}
+//
+//enum ThemeGroup: String, Codable {
+//    case licensed = "Licensed"
+//}
 
-enum ThemeGroup: String, Codable {
-    case licensed = "Licensed"
-}
-
-typealias Welcome = [WelcomeElement]
+typealias Welcome = [SetModel]
