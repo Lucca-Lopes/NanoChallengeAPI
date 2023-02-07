@@ -22,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemesService.swift; sourceTree = "<group>"; };
+		DF3BD2F72992F184006D5E9D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		DF3BD2F82992F1BC006D5E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeModel.swift; sourceTree = "<group>"; };
 		DFDF8AC2298D9E7200438478 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		DFEAAEDE298AFC2E00A98B8A = {
 			isa = PBXGroup;
 			children = (
+				DF3BD2F72992F184006D5E9D /* Config.xcconfig */,
 				DFEAAEE9298AFC2E00A98B8A /* NanoAPI */,
 				DFEAAEE8298AFC2E00A98B8A /* Products */,
 			);
@@ -101,6 +104,7 @@
 		DFEAAEE9298AFC2E00A98B8A /* NanoAPI */ = {
 			isa = PBXGroup;
 			children = (
+				DF3BD2F82992F1BC006D5E9D /* Info.plist */,
 				DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */,
 				DFE56FE729916AFC009E367C /* Core */,
 				DFDF8ABC298D8AC300438478 /* Models */,
@@ -215,6 +219,7 @@
 /* Begin XCBuildConfiguration section */
 		DFEAAEF3298AFC2F00A98B8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3BD2F72992F184006D5E9D /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -275,6 +280,7 @@
 		};
 		DFEAAEF4298AFC2F00A98B8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3BD2F72992F184006D5E9D /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -338,6 +344,7 @@
 				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NanoAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -368,6 +375,7 @@
 				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NanoAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

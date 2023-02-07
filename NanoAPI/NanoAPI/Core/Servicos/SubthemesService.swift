@@ -20,7 +20,9 @@ class SubthemesService {
 //    }
     
     public func getSubthemes(nomeTema: String){
-        guard let url = URL(string: "https://brickset.com/api/v3.asmx/getSubthemes?apiKey=3-Qym0-pfwQ-Tu0in&theme=\(nomeTema)") else { return }
+        guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String else { return }
+        
+        guard let url = URL(string: "https://brickset.com/api/v3.asmx/getSubthemes?apiKey=\(apiKey)&theme=\(nomeTema)") else { return }
         
         responseSubscription = URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .default))
