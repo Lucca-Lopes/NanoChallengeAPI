@@ -1,0 +1,11 @@
+//
+//  KeyConfig.xcconfig
+//  NanoAPI
+//
+//  Created by Lucca Lopes on 07/02/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = 3-Qym0-pfwQ-Tu0in
