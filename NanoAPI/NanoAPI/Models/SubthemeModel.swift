@@ -18,8 +18,7 @@ import Foundation
  
  */
 
-struct SubthemeModel: Identifiable, Codable {
+struct SubthemeModel: Codable, Hashable {
     let theme, subtheme: String
     let setCount, yearFrom, yearTo: Int
-    var id = UUID()
 }

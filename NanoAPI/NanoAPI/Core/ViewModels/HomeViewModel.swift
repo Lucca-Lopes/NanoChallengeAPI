@@ -10,17 +10,6 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     
-//    @Published var resposta: Response? {
-//        get {
-//            return nil
-//        }
-//        set {
-//            guard let newValue else { return }
-//            temas = newValue.themes
-////            atualizarTemas(resposta: newValue)
-//        }
-//    }
-    
     @Published var temas: [ThemeModel] = []
     @Published var subtemas: [SubthemeModel] = []
     @Published var sets: [SetModel] = []
@@ -39,12 +28,4 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &respostaCancelaveis)
     }
-    
-//    func atualizarTemas(resposta: Response){
-//        for tema in resposta.themes {
-//            temas.append(.init(tema: tema))
-//        }
-//        print(temas)
-//    }
-    
 }

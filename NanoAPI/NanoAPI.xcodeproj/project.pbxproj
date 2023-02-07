@@ -13,9 +13,10 @@
 		DFE56FEA29916B37009E367C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE56FE929916B37009E367C /* HomeViewModel.swift */; };
 		DFE56FED29916CBD009E367C /* ThemesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE56FEC29916CBD009E367C /* ThemesService.swift */; };
 		DFEAAEEB298AFC2E00A98B8A /* NanoAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */; };
-		DFEAAEED298AFC2E00A98B8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */; };
+		DFEAAEED298AFC2E00A98B8A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */; };
 		DFEAAEEF298AFC2F00A98B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */; };
 		DFEAAEF2298AFC2F00A98B8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */; };
+		DFFF178A2992BF0B002B8760 /* SubthemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF17892992BF0B002B8760 /* SubthemeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +27,10 @@
 		DFE56FEC29916CBD009E367C /* ThemesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesService.swift; sourceTree = "<group>"; };
 		DFEAAEE7298AFC2E00A98B8A /* NanoAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoAPIApp.swift; sourceTree = "<group>"; };
-		DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFFF17892992BF0B002B8760 /* SubthemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +98,10 @@
 		DFEAAEE9298AFC2E00A98B8A /* NanoAPI */ = {
 			isa = PBXGroup;
 			children = (
+				DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */,
 				DFE56FE729916AFC009E367C /* Core */,
 				DFDF8ABC298D8AC300438478 /* Models */,
-				DFEAAEEA298AFC2E00A98B8A /* NanoAPIApp.swift */,
-				DFEAAEEC298AFC2E00A98B8A /* ContentView.swift */,
+				DFFF17882992BE2D002B8760 /* Views */,
 				DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */,
 				DFEAAEF0298AFC2F00A98B8A /* Preview Content */,
 			);
@@ -112,6 +114,15 @@
 				DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFFF17882992BE2D002B8760 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */,
+				DFFF17892992BF0B002B8760 /* SubthemeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +199,8 @@
 				DFE56FEA29916B37009E367C /* HomeViewModel.swift in Sources */,
 				DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */,
 				DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */,
-				DFEAAEED298AFC2E00A98B8A /* ContentView.swift in Sources */,
+				DFEAAEED298AFC2E00A98B8A /* HomeView.swift in Sources */,
+				DFFF178A2992BF0B002B8760 /* SubthemeView.swift in Sources */,
 				DFEAAEEB298AFC2E00A98B8A /* NanoAPIApp.swift in Sources */,
 				DFE56FED29916CBD009E367C /* ThemesService.swift in Sources */,
 			);
