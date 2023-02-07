@@ -90,3 +90,5 @@ fastlane/test_output
 .DS_Store
 
 iOSInjectionProject/
+NanoAPI/Config.xcconfig
+*.xcconfig
