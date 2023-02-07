@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */; };
 		DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */; };
 		DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */; };
 		DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8AC2298D9E7200438478 /* SetModel.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemesService.swift; sourceTree = "<group>"; };
 		DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeModel.swift; sourceTree = "<group>"; };
 		DFDF8AC2298D9E7200438478 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE56FEC29916CBD009E367C /* ThemesService.swift */,
+				DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */,
 			);
 			path = Servicos;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */,
+				DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */,
 				DFE56FEA29916B37009E367C /* HomeViewModel.swift in Sources */,
 				DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */,
 				DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */,

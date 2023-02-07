@@ -1,26 +1,26 @@
 //
-//  ThemesService.swift
+//  SubthemesService.swift
 //  NanoAPI
 //
-//  Created by Lucca Lopes on 06/02/23.
+//  Created by Lucca Lopes on 07/02/23.
 //
 
 import Foundation
 import Combine
 
-class ThemesService {
+class SubthemesService {
     
 //    @Published var resposta: Response?
-    @Published var temas: [ThemeModel] = []
+    @Published var subtemas: [SubthemeModel] = []
     
     var responseSubscription: AnyCancellable?
     
-    init(){
-        getThemes()
-    }
+//    init(){
+//        getSubthemes()
+//    }
     
-    private func getThemes(){
-        guard let url = URL(string: "https://brickset.com/api/v3.asmx/getThemes?apiKey=3-Qym0-pfwQ-Tu0in") else { return }
+    public func getSubthemes(nomeTema: String){
+        guard let url = URL(string: "https://brickset.com/api/v3.asmx/getSubthemes?apiKey=3-Qym0-pfwQ-Tu0in&theme=\(nomeTema)") else { return }
         
         responseSubscription = URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .default))
@@ -32,7 +32,7 @@ class ThemesService {
                 return output.data
             }
             .receive(on: DispatchQueue.main)
-            .decode(type: ThemeResponse.self, decoder: JSONDecoder())
+            .decode(type: SubthemeResponse.self, decoder: JSONDecoder())
             .sink { (completion) in
                 switch completion {
                 case .finished:
@@ -41,7 +41,7 @@ class ThemesService {
                     print(String(describing: error))
                 }
             } receiveValue: { [weak self] (returnedResponses) in
-                self?.temas = returnedResponses.themes
+                self?.subtemas = returnedResponses.subthemes
                 self?.responseSubscription?.cancel()
             }
     }

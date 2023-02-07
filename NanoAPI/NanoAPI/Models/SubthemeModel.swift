@@ -22,3 +22,9 @@ struct SubthemeModel: Codable, Hashable {
     let theme, subtheme: String
     let setCount, yearFrom, yearTo: Int
 }
+
+struct SubthemeResponse: Codable {
+    let status: String
+    let matches: Int
+    let subthemes: [SubthemeModel]
+}

@@ -23,7 +23,7 @@ struct ThemeModel: Codable, Hashable {
     let setCount, subthemeCount, yearFrom, yearTo: Int
 }
 
-struct Response: Codable {
+struct ThemeResponse: Codable {
     let status: String
     let matches: Int
     let themes: [ThemeModel]

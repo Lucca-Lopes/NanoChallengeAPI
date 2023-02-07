@@ -15,17 +15,17 @@ struct HomeView: View {
         VStack {
             List {
                 ForEach(vm.temas, id: \.theme) { tema in
-                    NavigationLink {
-                        SubthemeView()
+                    NavigationLink {                        
+                        SubthemeView(vm: vm, nomeTema: tema.theme)
                     } label: {
                         Text(tema.theme)
                     }
-                    
                 }
             }
             .padding()
         }
         .navigationTitle("Temas")
+        .environmentObject(vm)
     }
 }
 
