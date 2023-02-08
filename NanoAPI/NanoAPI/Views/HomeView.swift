@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
     @State private var searchText = ""
+    let colunas = [GridItem(.flexible()), GridItem(.flexible())]
     var nomesTemas: [String] {
         get {
             vm.getThemesNames()
@@ -18,13 +19,14 @@ struct HomeView: View {
     }
             
     var body: some View {
-        VStack {
-            List {
+        ScrollView {
+            LazyVGrid(columns: colunas, spacing: 50) {
                 ForEach(searchResults, id: \.self) { tema in
                     NavigationLink {
                         SubthemeView(vm: vm, nomeTema: tema)
                     } label: {
                         Text(tema)
+                            .bold()
                     }
                 }
             }
