@@ -30,7 +30,7 @@ struct HomeView: View {
             }
             .padding()
         }
-        .navigationTitle("Temas")
+//        .navigationTitle("Temas")
         .environmentObject(vm)
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
