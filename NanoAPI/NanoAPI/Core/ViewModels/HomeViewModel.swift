@@ -44,4 +44,11 @@ class HomeViewModel: ObservableObject {
         subtemas = []
     }
     
+    public func getThemesNames() -> [String] {
+            var nomesTemas: [String] = []
+            for tema in temas {
+                nomesTemas.append(tema.theme)
+            }
+            return nomesTemas
+    }
 }

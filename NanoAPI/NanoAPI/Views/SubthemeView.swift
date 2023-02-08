@@ -23,7 +23,7 @@ struct SubthemeView: View {
                 Text(subtema.subtheme)
             }
         }
-        .navigationTitle("Subtemas")
+        .navigationTitle(nomeTema)
         .onAppear {
             vm.getSubthemes(nomeTema: nomeTema)
 //            print(nomeTema)

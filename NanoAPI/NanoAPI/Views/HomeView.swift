@@ -10,15 +10,21 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
+    @State private var searchText = ""
+    var nomesTemas: [String] {
+        get {
+            vm.getThemesNames()
+        }
+    }
             
     var body: some View {
         VStack {
             List {
-                ForEach(vm.temas, id: \.theme) { tema in
-                    NavigationLink {                        
-                        SubthemeView(vm: vm, nomeTema: tema.theme)
+                ForEach(searchResults, id: \.self) { tema in
+                    NavigationLink {
+                        SubthemeView(vm: vm, nomeTema: tema)
                     } label: {
-                        Text(tema.theme)
+                        Text(tema)
                     }
                 }
             }
@@ -26,6 +32,15 @@ struct HomeView: View {
         }
         .navigationTitle("Temas")
         .environmentObject(vm)
+        .searchable(text: $searchText, prompt: "Procurar Tema")
+    }
+    
+    var searchResults: [String]{
+        if searchText.isEmpty{
+            return nomesTemas
+        }else{
+            return nomesTemas.filter { $0.contains(searchText)}
+        }
     }
 }
 
