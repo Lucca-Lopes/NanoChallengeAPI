@@ -9,13 +9,13 @@ import SwiftUI
 
 struct SubthemeView: View {
     
-    public var vm: HomeViewModel
-    @State var tema: ThemeModel
+    @ObservedObject var vm: HomeViewModel
+    var tema: ThemeModel
     
-    init(vm: HomeViewModel, tema: ThemeModel) {
-        self.vm = vm
-        self.tema = tema
-    }
+//    init(vm: HomeViewModel, tema: ThemeModel) {
+//        self.vm = vm
+//        self.tema = tema
+//    }
     
     var body: some View {
         List{
@@ -24,11 +24,6 @@ struct SubthemeView: View {
             }
         }
         .navigationTitle(tema.theme)
-        .onAppear {
-            vm.getSubthemes(nomeTema: tema.theme)
-//            print(nomeTema)
-            print(vm.subtemas)
-        }
         .onDisappear {
             vm.cleanSubthemes()
         }

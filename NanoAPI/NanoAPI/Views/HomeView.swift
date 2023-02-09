@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject private var vm: HomeViewModel
+    @ObservedObject var vm: HomeViewModel
     @State private var searchText = ""
     let colunas = [GridItem(.flexible()), GridItem(.flexible())]
     var temas: [ThemeModel] {
@@ -25,22 +25,13 @@ struct HomeView: View {
             LazyVGrid(columns: colunas, spacing: 10) {
                 ForEach(temas, id: \.theme) { tema in
                     ThemeRowView(vm: vm, tema: tema)
-//                    NavigationLink {
-//                        SubthemeView(vm: vm, nomeTema: tema)
-//                    } label: {
-//                        Text(tema)
-//                    }
                 }
             }
             .padding()
         }
-        .environmentObject(vm)
+//        .environmentObject(vm)
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
-    
-//    var searchResults: [String]{
-//
-//    }
 }
 
 //struct ContentView_Previews: PreviewProvider {

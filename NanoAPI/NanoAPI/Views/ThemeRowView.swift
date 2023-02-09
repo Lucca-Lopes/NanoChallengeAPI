@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ThemeRowView: View {
-    let vm: HomeViewModel
-    let tema: ThemeModel
+    @ObservedObject var vm: HomeViewModel
+    var tema: ThemeModel
     
     var body: some View {
         NavigationLink {
@@ -21,11 +21,9 @@ struct ThemeRowView: View {
                     .foregroundColor(.white)
                     .font(.custom("SF Pro Display", fixedSize: 25))
                     .bold()
-//                    .shadow(radius: 40)
             }
-        }
-        .onTapGesture {
+        }.simultaneousGesture(TapGesture().onEnded{
             vm.getSubthemes(nomeTema: tema.theme)
-        }
+        })
     }
 }
