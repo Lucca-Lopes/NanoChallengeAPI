@@ -119,7 +119,7 @@ struct SetModel: Identifiable, Codable {
     let category: Category
     let released: Bool
     let pieces: Int
-    let image: Image
+    let image: SetImage
     let bricksetUrl: String
     let collection: Collection
     let collections: Collections
@@ -130,7 +130,7 @@ struct SetModel: Identifiable, Codable {
     let availability: Availability
     let instructionsCount, additionalImageCount: Int
     let ageRange: AgeRange
-    let dimensions: Dimensions
+    let dimensions: SetDimensions
     let barcode: Barcode
     let extendedData: Collection
     let lastUpdated: String
@@ -183,12 +183,12 @@ struct Collections: Codable {
 }
 
 // MARK: - Dimensions
-struct Dimensions: Codable {
+struct SetDimensions: Codable {
     let height, width, depth, weight: Double?
 }
 
 // MARK: - Image
-struct Image: Codable {
+struct SetImage: Codable {
     let thumbnailUrl, imageUrl: String
 
     enum CodingKeys: String, CodingKey {

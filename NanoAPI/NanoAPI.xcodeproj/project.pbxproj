@@ -17,6 +17,7 @@
 		DFEAAEED298AFC2E00A98B8A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */; };
 		DFEAAEEF298AFC2F00A98B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */; };
 		DFEAAEF2298AFC2F00A98B8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */; };
+		DFEB266429943ACE0087311A /* ThemeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB266329943ACE0087311A /* ThemeRowView.swift */; };
 		DFFF178A2992BF0B002B8760 /* SubthemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF17892992BF0B002B8760 /* SubthemeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFEB266329943ACE0087311A /* ThemeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRowView.swift; sourceTree = "<group>"; };
 		DFFF17892992BF0B002B8760 /* SubthemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			children = (
 				DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */,
 				DFFF17892992BF0B002B8760 /* SubthemeView.swift */,
+				DFEB266329943ACE0087311A /* ThemeRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */,
+				DFEB266429943ACE0087311A /* ThemeRowView.swift in Sources */,
 				DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */,
 				DFE56FEA29916B37009E367C /* HomeViewModel.swift in Sources */,
 				DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */,

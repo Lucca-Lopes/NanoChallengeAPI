@@ -10,11 +10,11 @@ import SwiftUI
 struct SubthemeView: View {
     
     public var vm: HomeViewModel
-    @State var nomeTema: String
+    @State var tema: ThemeModel
     
-    init(vm: HomeViewModel, nomeTema: String) {
+    init(vm: HomeViewModel, tema: ThemeModel) {
         self.vm = vm
-        self.nomeTema = nomeTema
+        self.tema = tema
     }
     
     var body: some View {
@@ -23,9 +23,9 @@ struct SubthemeView: View {
                 Text(subtema.subtheme)
             }
         }
-        .navigationTitle(nomeTema)
+        .navigationTitle(tema.theme)
         .onAppear {
-            vm.getSubthemes(nomeTema: nomeTema)
+            vm.getSubthemes(nomeTema: tema.theme)
 //            print(nomeTema)
             print(vm.subtemas)
         }
