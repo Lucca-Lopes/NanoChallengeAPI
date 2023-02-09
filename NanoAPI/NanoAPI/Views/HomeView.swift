@@ -22,14 +22,9 @@ struct HomeView: View {
             
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: colunas, spacing: 10) {
+            LazyVGrid(columns: colunas, spacing: 30) {
                 ForEach(temas, id: \.theme) { tema in
                     ThemeRowView(vm: vm, tema: tema)
-//                    NavigationLink {
-//                        SubthemeView(vm: vm, nomeTema: tema)
-//                    } label: {
-//                        Text(tema)
-//                    }
                 }
             }
             .padding()
@@ -37,10 +32,6 @@ struct HomeView: View {
         .environmentObject(vm)
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
-    
-//    var searchResults: [String]{
-//
-//    }
 }
 
 //struct ContentView_Previews: PreviewProvider {
