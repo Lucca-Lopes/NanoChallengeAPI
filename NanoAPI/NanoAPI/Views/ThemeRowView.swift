@@ -18,6 +18,10 @@ struct ThemeRowView: View {
             ZStack{
                 Image(vm.temasImagens.randomElement() ?? "greenTemas")
                 Text(tema.theme)
+                    .foregroundColor(.white)
+                    .font(.custom("SF Pro Display", fixedSize: 25))
+                    .bold()
+//                    .shadow(radius: 40)
             }
         }
         .onTapGesture {

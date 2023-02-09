@@ -11,21 +11,25 @@ struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
     @State private var searchText = ""
-    var nomesTemas: [String] {
-        get {
-            vm.getThemesNames()
+    let colunas = [GridItem(.flexible()), GridItem(.flexible())]
+    var temas: [ThemeModel] {
+        if searchText.isEmpty{
+            return vm.temas
+        }else{
+            return vm.temas.filter { $0.theme.contains(searchText)}
         }
     }
             
     var body: some View {
-        VStack {
-            List {
-                ForEach(searchResults, id: \.self) { tema in
-                    NavigationLink {
-                        SubthemeView(vm: vm, nomeTema: tema)
-                    } label: {
-                        Text(tema)
-                    }
+        ScrollView {
+            LazyVGrid(columns: colunas, spacing: 10) {
+                ForEach(temas, id: \.theme) { tema in
+                    ThemeRowView(vm: vm, tema: tema)
+//                    NavigationLink {
+//                        SubthemeView(vm: vm, nomeTema: tema)
+//                    } label: {
+//                        Text(tema)
+//                    }
                 }
             }
             .padding()
@@ -34,13 +38,9 @@ struct HomeView: View {
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
     
-    var searchResults: [String]{
-        if searchText.isEmpty{
-            return nomesTemas
-        }else{
-            return nomesTemas.filter { $0.contains(searchText)}
-        }
-    }
+//    var searchResults: [String]{
+//
+//    }
 }
 
 //struct ContentView_Previews: PreviewProvider {
