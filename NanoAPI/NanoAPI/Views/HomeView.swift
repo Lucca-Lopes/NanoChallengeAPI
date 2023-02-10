@@ -22,7 +22,7 @@ struct HomeView: View {
             
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: colunas, spacing: 10) {
+            LazyVGrid(columns: colunas, spacing: 30) {
                 ForEach(temas, id: \.theme) { tema in
                     ThemeRowView(vm: vm, tema: tema)
                 }
