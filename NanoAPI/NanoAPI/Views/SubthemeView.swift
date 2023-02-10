@@ -18,13 +18,13 @@ struct SubthemeView: View {
 //    }
     
     var body: some View {
-        LazyVStack {
+//        LazyVStack {
             List{
                 ForEach(vm.subtemas, id: \.subtheme) { subtema in
                     Text(subtema.subtheme)
                 }
             }
-        }
+//        }
         .navigationTitle(tema.theme)
         .onDisappear {
             vm.cleanSubthemes()
