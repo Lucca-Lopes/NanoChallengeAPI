@@ -1,41 +1,47 @@
 //
-//  SubthemesService.swift
+//  SetsService.swift
 //  NanoAPI
 //
-//  Created by Lucca Lopes on 07/02/23.
+//  Created by Lucca Lopes on 10/02/23.
 //
 
 import Foundation
 import Combine
 
-class SubthemesService {
+class SetsService {
     
-    @Published var subtemas: [SubthemeModel] = []
+    @Published var sets: [SetModel] = []
     
     var responseSubscription: AnyCancellable?
     
-    public func getSubthemes(nomeTema: String) {
+    public func getSets(nomeTema: String, nomeSubtema: String) {
         guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String else { return }
+                
+        var urlComponents = URLComponents()
         
-        guard let url = URL(string: "https://brickset.com/api/v3.asmx/getSubthemes?apiKey=\(apiKey)&theme=\(nomeTema)") else { return }
+        urlComponents.scheme = "https"
+        urlComponents.host = "brickset.com"
+        urlComponents.path = "/api/v3.asmx/getSets"
+        urlComponents.queryItems = [URLQueryItem(name: "apiKey", value: apiKey), URLQueryItem(name: "userHash", value: ""), URLQueryItem(name: "params", value: "{'theme':'\(nomeTema)', 'subtheme':'\(nomeSubtema)'}")]
         
 //        var request = URLRequest(url: url)
 //        request.httpMethod = "GET"
 //        request.setValue("", forHTTPHeaderField: "")
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { [weak self] data, _, error in
+        let task = URLSession.shared.dataTask(with: urlComponents.url!) { [weak self] data, _, error in
             guard let data = data, error == nil else { return }
             do {
-                let result = try JSONDecoder().decode(SubthemeResponse.self, from: data)
+                let result = try JSONDecoder().decode(SetResponse.self, from: data)
                 DispatchQueue.main.async {
-                    self?.subtemas = result.subthemes
+                    self?.sets = result.sets
                 }
             }
             catch {
-                print(error.localizedDescription)
+                print(error)
             }
         }
         task.resume()
+        print(self.sets)
         
 //        responseSubscription = URLSession.shared.dataTaskPublisher(for: url)
 //            .subscribe(on: DispatchQueue.global(qos: .default))

@@ -11,10 +11,9 @@ struct SubthemeRowView: View {
     @ObservedObject var vm: HomeViewModel
     var subtema: SubthemeModel
     
-    
     var body: some View {
         NavigationLink {
-            
+            SetsView(vm: vm, subtema: subtema)
         } label: {
             ZStack{
                 Image(vm.subtemasImagens.randomElement() ?? "greenSubtemas")
@@ -29,7 +28,7 @@ struct SubthemeRowView: View {
                     .shadow(color: .black, radius: 2, x: 2, y: 2)
             }
         }.simultaneousGesture(TapGesture().onEnded{
-            
+            vm.getSets(nomeTema: subtema.theme, nomeSubtema: subtema.subtheme)
         })
     }
 }
