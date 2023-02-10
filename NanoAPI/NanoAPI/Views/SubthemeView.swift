@@ -19,10 +19,30 @@ struct SubthemeView: View {
             return vm.subtemas.filter { $0.subtheme.contains(searchText)}
         }
     }
+    let screenWidth = UIScreen.main.bounds.size.width
     
     var body: some View {
+        Divider()
+        //        Spacer()
+        //        Spacer()
+//        Form{
+//            Text("Subtemas")
+//            Text("Ano")
+//            Text("Última Atualização")
+//        }
+
         ScrollView {
             LazyVStack {
+                Text("""
+                     Subtemas
+                     Ano
+                     Última Atualização
+                     """)
+                .frame(width: screenWidth * 0.8, alignment: .leading)
+                .background(RoundedRectangle(cornerRadius: 5) .fill(.gray) .frame(width: screenWidth * 0.8))
+                
+                Spacer(minLength: 30)
+                
                 ForEach(subtemas, id: \.subtheme) { subtema in
                     SubthemeRowView(vm: vm, subtema: subtema)
                 }

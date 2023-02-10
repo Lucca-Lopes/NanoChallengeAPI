@@ -116,6 +116,7 @@
 				DFDF8ABC298D8AC300438478 /* Models */,
 				DFFF17882992BE2D002B8760 /* Views */,
 				DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */,
+				43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */,
 				DFEAAEF0298AFC2F00A98B8A /* Preview Content */,
 			);
 			path = NanoAPI;
@@ -136,7 +137,6 @@
 				DFFF17892992BF0B002B8760 /* SubthemeView.swift */,
 				DFEB266329943ACE0087311A /* ThemeRowView.swift */,
 				43456AC52996C1A500208E77 /* SubthemeRowView.swift */,
-				43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +357,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NanoAPI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -387,6 +388,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NanoAPI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
