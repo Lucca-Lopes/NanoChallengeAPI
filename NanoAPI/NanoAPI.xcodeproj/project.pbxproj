@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43456AC62996C1A500208E77 /* SubthemeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43456AC52996C1A500208E77 /* SubthemeRowView.swift */; };
 		43B0811E29957FB100597E2E /* SF Pro Display Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */; };
 		DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */; };
 		DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43456AC52996C1A500208E77 /* SubthemeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeRowView.swift; sourceTree = "<group>"; };
 		43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Display Black.ttf"; sourceTree = "<group>"; };
 		DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemesService.swift; sourceTree = "<group>"; };
 		DF3BD2F72992F184006D5E9D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */,
 				DFFF17892992BF0B002B8760 /* SubthemeView.swift */,
 				DFEB266329943ACE0087311A /* ThemeRowView.swift */,
+				43456AC52996C1A500208E77 /* SubthemeRowView.swift */,
 				43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */,
 			);
 			path = Views;
@@ -218,6 +221,7 @@
 				DFEAAEED298AFC2E00A98B8A /* HomeView.swift in Sources */,
 				DFFF178A2992BF0B002B8760 /* SubthemeView.swift in Sources */,
 				DFEAAEEB298AFC2E00A98B8A /* NanoAPIApp.swift in Sources */,
+				43456AC62996C1A500208E77 /* SubthemeRowView.swift in Sources */,
 				DFE56FED29916CBD009E367C /* ThemesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

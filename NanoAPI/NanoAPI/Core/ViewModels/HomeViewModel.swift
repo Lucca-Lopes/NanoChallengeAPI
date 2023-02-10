@@ -14,7 +14,8 @@ class HomeViewModel: ObservableObject {
     @Published var subtemas: [SubthemeModel] = []
     @Published var sets: [SetModel] = []
     
-    public var temasImagens: [String] = ["blueTemas", "greenTemas", "redTemas", "yellowTemas", "orangeTemas"]
+    public let temasImagens: [String] = ["blueTemas", "greenTemas", "redTemas", "yellowTemas", "orangeTemas"]
+    public let subtemasImagens: [String] = ["blueSubtemas", "greenSubtemas", "redSubtemas", "orangeSubtemas"]
     private let themesService = ThemesService()
     private let subthemesService = SubthemesService()
     private var cancelaveis = Set<AnyCancellable>()

@@ -11,24 +11,26 @@ struct SubthemeView: View {
     
     @ObservedObject var vm: HomeViewModel
     var tema: ThemeModel
-    
-//    init(vm: HomeViewModel, tema: ThemeModel) {
-//        self.vm = vm
-//        self.tema = tema
-//    }
+    @State private var searchText = ""
+    var subtemas: [SubthemeModel] {
+        if searchText.isEmpty{
+            return vm.subtemas
+        }else{
+            return vm.subtemas.filter { $0.subtheme.contains(searchText)}
+        }
+    }
     
     var body: some View {
-//        LazyVStack {
-            List{
-                ForEach(vm.subtemas, id: \.subtheme) { subtema in
-                    Text(subtema.subtheme)
+        ScrollView {
+            LazyVStack {
+                ForEach(subtemas, id: \.subtheme) { subtema in
+                    SubthemeRowView(vm: vm, subtema: subtema)
                 }
             }
-//        }
-        .navigationTitle(tema.theme)
-        .onDisappear {
-            vm.cleanSubthemes()
         }
+        .navigationBarTitleDisplayMode(.large)
+        .navigationTitle(tema.theme)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Procurar Subtema")
     }
 }
 
