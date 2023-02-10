@@ -39,6 +39,7 @@ class HomeViewModel: ObservableObject {
     
     public func getSubthemes(nomeTema: String) {
         subthemesService.getSubthemes(nomeTema: nomeTema)
+        print(subtemas)
     }
     
     public func cleanSubthemes(){

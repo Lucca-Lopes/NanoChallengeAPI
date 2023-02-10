@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject private var vm: HomeViewModel
+    @ObservedObject var vm: HomeViewModel
     @State private var searchText = ""
     let colunas = [GridItem(.flexible()), GridItem(.flexible())]
     var temas: [ThemeModel] {
@@ -29,7 +29,7 @@ struct HomeView: View {
             }
             .padding()
         }
-        .environmentObject(vm)
+//        .environmentObject(vm)
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
 }
