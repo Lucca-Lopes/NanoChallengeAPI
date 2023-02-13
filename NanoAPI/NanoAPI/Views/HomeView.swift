@@ -29,7 +29,8 @@ struct HomeView: View {
             }
             .padding()
         }
-//        .environmentObject(vm)
+        .navigationTitle("Legonation")
+        .navigationBarTitleDisplayMode(.large)
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
 }

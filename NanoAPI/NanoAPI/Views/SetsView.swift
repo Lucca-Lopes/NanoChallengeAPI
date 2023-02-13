@@ -19,9 +19,29 @@ struct SetsView: View {
             return vm.sets.filter { $0.name.contains(searchText)}
         }
     }
+    
+    let screenWidth = UIScreen.main.bounds.size.width
+    
     var body: some View {
+        Divider()
         ScrollView {
             LazyVStack {
+                Text("""
+                     Sets: \(subtema.setCount)
+                     Ano: \(String(subtema.yearFrom))
+                     Última Atualização: \(String(subtema.yearTo))
+                     """)
+                .lineSpacing(3)
+                .padding()
+                .font(.system(size: 13))
+                .frame(width: screenWidth * 0.8, alignment: .leading)
+                .background{
+                    RoundedRectangle(cornerRadius: 5)
+                        .fill(Color(uiColor: .systemGray5))
+                        .frame(width: screenWidth * 0.8)
+                }
+                
+                Spacer(minLength: 30)
                 ForEach(sets, id: \.id) { set in
                     SetRowView(set: set)
                 }

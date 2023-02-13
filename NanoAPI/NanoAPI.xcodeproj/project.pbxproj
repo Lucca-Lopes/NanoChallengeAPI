@@ -12,6 +12,7 @@
 		DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */; };
 		DF635873299AA648009AB48E /* OneSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF635872299AA648009AB48E /* OneSetView.swift */; };
 		DF635875299AA6FE009AB48E /* SetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF635874299AA6FE009AB48E /* SetRowView.swift */; };
+		DF635877299AD089009AB48E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF635876299ACD71009AB48E /* LaunchScreen.storyboard */; };
 		DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */; };
 		DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */; };
 		DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8AC2298D9E7200438478 /* SetModel.swift */; };
@@ -35,6 +36,7 @@
 		DF3BD2F82992F1BC006D5E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DF635872299AA648009AB48E /* OneSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSetView.swift; sourceTree = "<group>"; };
 		DF635874299AA6FE009AB48E /* SetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRowView.swift; sourceTree = "<group>"; };
+		DF635876299ACD71009AB48E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeModel.swift; sourceTree = "<group>"; };
 		DFDF8AC2298D9E7200438478 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DF3BD2F72992F184006D5E9D /* Config.xcconfig */,
+				DF635876299ACD71009AB48E /* LaunchScreen.storyboard */,
 				DFEAAEE9298AFC2E00A98B8A /* NanoAPI */,
 				DFEAAEE8298AFC2E00A98B8A /* Products */,
 			);
@@ -149,7 +152,6 @@
 				DFEB266329943ACE0087311A /* ThemeRowView.swift */,
 				43456AC52996C1A500208E77 /* SubthemeRowView.swift */,
 				DF635874299AA6FE009AB48E /* SetRowView.swift */,
-				43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEAAEF2298AFC2F00A98B8A /* Preview Assets.xcassets in Resources */,
+				DF635877299AD089009AB48E /* LaunchScreen.storyboard in Resources */,
 				DFEAAEEF298AFC2F00A98B8A /* Assets.xcassets in Resources */,
 				43B0811E29957FB100597E2E /* SF Pro Display Black.ttf in Resources */,
 			);
@@ -367,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoAPI/Preview Content\"";
@@ -374,10 +378,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NanoAPI/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = Legonation;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoAPI/Preview Content\"";
@@ -405,10 +411,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NanoAPI/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = Legonation;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -8,5 +8,7 @@
 	<array>
 		<string>SF Pro Display Black.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
 </dict>
 </plist>
