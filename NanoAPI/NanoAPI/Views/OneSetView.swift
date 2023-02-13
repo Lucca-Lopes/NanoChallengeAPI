@@ -29,7 +29,7 @@ struct OneSetView: View {
             Section(header: Text("\(set.theme) > \(set.subtheme ?? "") > \(set.name) \n\nDescrição do Produto")){
                 SetDescriptionRow(texto: "Nome", informacao: set.name)
                 SetDescriptionRow(texto: "Número de variações", informacao: String(set.numberVariant))
-                SetDescriptionRow(texto: "ID", informacao: String(set.id))
+                SetDescriptionRow(texto: "Lego ID", informacao: String(set.id))
                 SetDescriptionRow(texto: "Ano de criação", informacao: String(set.year))
                 SetDescriptionRow(texto: "Foi lançado?", informacao: set.released ? "Sim" : "Não")
                 SetDescriptionRow(texto: "Número de peças", informacao: String(set.pieces ?? 0))
