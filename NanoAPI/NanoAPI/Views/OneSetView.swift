@@ -10,6 +10,12 @@ import SwiftUI
 struct OneSetView: View {
     var set: SetModel
     
+    let numFormatacao: NumberFormatter = {
+        let numero = NumberFormatter()
+        numero.decimalSeparator = ","
+        return numero
+    }()
+    
     var body: some View {
         List{
             AsyncImage(url: URL(string: set.image.imageUrl)){ image in image
@@ -36,21 +42,21 @@ struct OneSetView: View {
             }
             Section(header: Text("Relatório de vendas")){
                 SetDescriptionRow(texto: "Quantia vendida", informacao: String(set.collections.ownedBy ?? 0))
-                SetDescriptionRow(texto: "Nota de 0 a 5", informacao: String(set.rating))
+                SetDescriptionRow(texto: "Nota de 0 a 5", informacao: String(format: "%.2f", locale: Locale(identifier: "br"), set.rating))
                 SetDescriptionRow(texto: "Número de avaliações", informacao: String(set.reviewCount))
             }
             Section(header: Text("Preços")){
-                SetDescriptionRow(texto: "EUA", informacao: set.legoCom.us.retailPrice != nil ? "US$ \(String(set.legoCom.us.retailPrice!))" : "Não especificado")
-                SetDescriptionRow(texto: "Reino Unido", informacao: set.legoCom.uk.retailPrice != nil ? "£ \(String(set.legoCom.uk.retailPrice!))" : "Não especificado")
-                SetDescriptionRow(texto: "Canadá", informacao: set.legoCom.ca.retailPrice != nil ? "C$ \(String(set.legoCom.ca.retailPrice!))" : "Não especificado")
-                SetDescriptionRow(texto: "Alemanha", informacao: set.legoCom.de.retailPrice != nil ? "€ \(String(set.legoCom.de.retailPrice!))" : "Não especificado")
+                SetDescriptionRow(texto: "EUA", informacao: set.legoCom.us.retailPrice != nil ? "US$ \(String(format: "%.2f", locale: Locale(identifier: "br"), set.legoCom.us.retailPrice!))" : "Não especificado")
+                SetDescriptionRow(texto: "Reino Unido", informacao: set.legoCom.uk.retailPrice != nil ? "£ \(String(format: "%.2f", locale: Locale(identifier: "br"), set.legoCom.uk.retailPrice!))" : "Não especificado")
+                SetDescriptionRow(texto: "Canadá", informacao: set.legoCom.ca.retailPrice != nil ? "C$ \(String(format: "%.2f", locale: Locale(identifier: "br"), set.legoCom.ca.retailPrice!))" : "Não especificado")
+                SetDescriptionRow(texto: "Alemanha", informacao: set.legoCom.de.retailPrice != nil ? "€ \(String(format: "%.2f", locale: Locale(identifier: "br"), set.legoCom.de.retailPrice!))" : "Não especificado")
             }
             Section(header: Text("Informações da caixa")){
-                SetDescriptionRow(texto: "Tipo", informacao: String(set.packagingType))
-                SetDescriptionRow(texto: "Altura", informacao: set.dimensions.height != nil ? String(set.dimensions.height!) : "Não especificado")
-                SetDescriptionRow(texto: "Comprimento", informacao: set.dimensions.width != nil ? String(set.dimensions.width!) : "Não especificado")
-                SetDescriptionRow(texto: "Profundidade", informacao: set.dimensions.depth != nil ? String(set.dimensions.depth!) : "Não especificado")
-                SetDescriptionRow(texto: "Peso líquido", informacao: set.dimensions.weight != nil ? String(set.dimensions.weight!) : "Não especificado")
+                SetDescriptionRow(texto: "Tipo", informacao: String(set.packagingType != "{Not specified}" ? set.packagingType : "Não especificado"))
+                SetDescriptionRow(texto: "Altura", informacao: set.dimensions.height != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.height!) : "Não especificado")
+                SetDescriptionRow(texto: "Comprimento", informacao: set.dimensions.width != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.width!) : "Não especificado")
+                SetDescriptionRow(texto: "Profundidade", informacao: set.dimensions.depth != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.depth!) : "Não especificado")
+                SetDescriptionRow(texto: "Peso líquido", informacao: set.dimensions.weight != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.weight!) : "Não especificado")
             }
             .navigationBarTitleDisplayMode(.large)
             .navigationTitle(set.name != "{None}" ? set.name : "Não classificado")

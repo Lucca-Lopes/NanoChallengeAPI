@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43456AC62996C1A500208E77 /* SubthemeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43456AC52996C1A500208E77 /* SubthemeRowView.swift */; };
+		43456AC9299AD14700208E77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43456ACB299AD14700208E77 /* Localizable.strings */; };
 		43B0811E29957FB100597E2E /* SF Pro Display Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */; };
 		DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */; };
 		DF635873299AA648009AB48E /* OneSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF635872299AA648009AB48E /* OneSetView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		43456AC52996C1A500208E77 /* SubthemeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeRowView.swift; sourceTree = "<group>"; };
+		43456ACA299AD14700208E77 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Display Black.ttf"; sourceTree = "<group>"; };
 		DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemesService.swift; sourceTree = "<group>"; };
 		DF3BD2F72992F184006D5E9D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				DF3BD2F72992F184006D5E9D /* Config.xcconfig */,
 				DF635876299ACD71009AB48E /* LaunchScreen.storyboard */,
+				43456ACB299AD14700208E77 /* Localizable.strings */,
 				DFEAAEE9298AFC2E00A98B8A /* NanoAPI */,
 				DFEAAEE8298AFC2E00A98B8A /* Products */,
 			);
@@ -198,6 +201,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = DFEAAEDE298AFC2E00A98B8A;
 			productRefGroup = DFEAAEE8298AFC2E00A98B8A /* Products */;
@@ -214,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43456AC9299AD14700208E77 /* Localizable.strings in Resources */,
 				DFEAAEF2298AFC2F00A98B8A /* Preview Assets.xcassets in Resources */,
 				DF635877299AD089009AB48E /* LaunchScreen.storyboard in Resources */,
 				DFEAAEEF298AFC2F00A98B8A /* Assets.xcassets in Resources */,
@@ -247,6 +252,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43456ACB299AD14700208E77 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43456ACA299AD14700208E77 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DFEAAEF3298AFC2F00A98B8A /* Debug */ = {
