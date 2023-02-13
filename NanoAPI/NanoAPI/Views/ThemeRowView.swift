@@ -26,6 +26,7 @@ struct ThemeRowView: View {
                     .foregroundColor(.white)
                     .font(.custom("SF Pro Display Black", fixedSize: 20))
                     .shadow(color: .black, radius: 2, x: 2, y: 2)
+                    .padding(.top, 5)
             }
         }.simultaneousGesture(TapGesture().onEnded{
             vm.getSubthemes(nomeTema: tema.theme)

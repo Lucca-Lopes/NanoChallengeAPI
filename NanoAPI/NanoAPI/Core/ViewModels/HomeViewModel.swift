@@ -16,7 +16,6 @@ class HomeViewModel: ObservableObject {
     
     public let temasImagens: [String] = ["blueTemas", "greenTemas", "redTemas", "yellowTemas", "orangeTemas"]
     public let subtemasImagens: [String] = ["blueSubtemas", "greenSubtemas", "redSubtemas", "orangeSubtemas"]
-    public let setsImagens: [String] = ["blueSets", "greenSets", "redSets", "orangeSets"]
     
     private let themesService = ThemesService()
     private let subthemesService = SubthemesService()

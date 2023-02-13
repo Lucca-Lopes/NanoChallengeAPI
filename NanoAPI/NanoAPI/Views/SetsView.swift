@@ -23,7 +23,7 @@ struct SetsView: View {
         ScrollView {
             LazyVStack {
                 ForEach(sets, id: \.id) { set in
-                    Text(set.name)
+                    SetRowView(set: set)
                 }
             }
         }
