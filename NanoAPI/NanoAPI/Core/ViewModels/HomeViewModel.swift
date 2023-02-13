@@ -16,8 +16,11 @@ class HomeViewModel: ObservableObject {
     
     public let temasImagens: [String] = ["blueTemas", "greenTemas", "redTemas", "yellowTemas", "orangeTemas"]
     public let subtemasImagens: [String] = ["blueSubtemas", "greenSubtemas", "redSubtemas", "orangeSubtemas"]
+    
     private let themesService = ThemesService()
     private let subthemesService = SubthemesService()
+    private let setService = SetsService()
+    
     private var cancelaveis = Set<AnyCancellable>()
     
     init(){
@@ -36,22 +39,27 @@ class HomeViewModel: ObservableObject {
                 self?.subtemas = returnedSubthemes
             }
             .store(in: &cancelaveis)
+        
+        setService.$sets
+            .sink { [weak self] (returnedSets) in
+                self?.sets = returnedSets
+            }
+            .store(in: &cancelaveis)
     }
     
     public func getSubthemes(nomeTema: String) {
         subthemesService.getSubthemes(nomeTema: nomeTema)
-        print(subtemas)
     }
     
-    public func cleanSubthemes(){
-        subtemas = []
+    public func getSets(nomeTema: String, nomeSubtema: String) {
+        setService.getSets(nomeTema: nomeTema, nomeSubtema: nomeSubtema)
     }
     
-    public func getThemesNames() -> [String] {
-            var nomesTemas: [String] = []
-            for tema in temas {
-                nomesTemas.append(tema.theme)
-            }
-            return nomesTemas
-    }
+//    public func getThemesNames() -> [String] {
+//            var nomesTemas: [String] = []
+//            for tema in temas {
+//                nomesTemas.append(tema.theme)
+//            }
+//            return nomesTemas
+//    }
 }

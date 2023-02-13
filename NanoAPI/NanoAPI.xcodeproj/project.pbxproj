@@ -10,6 +10,8 @@
 		43456AC62996C1A500208E77 /* SubthemeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43456AC52996C1A500208E77 /* SubthemeRowView.swift */; };
 		43B0811E29957FB100597E2E /* SF Pro Display Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */; };
 		DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */; };
+		DF635873299AA648009AB48E /* OneSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF635872299AA648009AB48E /* OneSetView.swift */; };
+		DF635875299AA6FE009AB48E /* SetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF635874299AA6FE009AB48E /* SetRowView.swift */; };
 		DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */; };
 		DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */; };
 		DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDF8AC2298D9E7200438478 /* SetModel.swift */; };
@@ -20,6 +22,8 @@
 		DFEAAEEF298AFC2F00A98B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */; };
 		DFEAAEF2298AFC2F00A98B8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */; };
 		DFEB266429943ACE0087311A /* ThemeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEB266329943ACE0087311A /* ThemeRowView.swift */; };
+		DFEBC93A2996C4A600AA5703 /* SetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEBC9392996C4A600AA5703 /* SetsService.swift */; };
+		DFEBC93C2996C77F00AA5703 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEBC93B2996C77F00AA5703 /* SetsView.swift */; };
 		DFFF178A2992BF0B002B8760 /* SubthemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF17892992BF0B002B8760 /* SubthemeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,8 @@
 		DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemesService.swift; sourceTree = "<group>"; };
 		DF3BD2F72992F184006D5E9D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		DF3BD2F82992F1BC006D5E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DF635872299AA648009AB48E /* OneSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSetView.swift; sourceTree = "<group>"; };
+		DF635874299AA6FE009AB48E /* SetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRowView.swift; sourceTree = "<group>"; };
 		DFDF8ABD298D8AEC00438478 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		DFDF8ABF298D9DB800438478 /* SubthemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeModel.swift; sourceTree = "<group>"; };
 		DFDF8AC2298D9E7200438478 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		DFEAAEEE298AFC2F00A98B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFEAAEF1298AFC2F00A98B8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFEB266329943ACE0087311A /* ThemeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRowView.swift; sourceTree = "<group>"; };
+		DFEBC9392996C4A600AA5703 /* SetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsService.swift; sourceTree = "<group>"; };
+		DFEBC93B2996C77F00AA5703 /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
 		DFFF17892992BF0B002B8760 /* SubthemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubthemeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +94,7 @@
 			children = (
 				DFE56FEC29916CBD009E367C /* ThemesService.swift */,
 				DF3BD2F52992D4FB006D5E9D /* SubthemesService.swift */,
+				DFEBC9392996C4A600AA5703 /* SetsService.swift */,
 			);
 			path = Servicos;
 			sourceTree = "<group>";
@@ -135,8 +144,12 @@
 			children = (
 				DFEAAEEC298AFC2E00A98B8A /* HomeView.swift */,
 				DFFF17892992BF0B002B8760 /* SubthemeView.swift */,
+				DFEBC93B2996C77F00AA5703 /* SetsView.swift */,
+				DF635872299AA648009AB48E /* OneSetView.swift */,
 				DFEB266329943ACE0087311A /* ThemeRowView.swift */,
 				43456AC52996C1A500208E77 /* SubthemeRowView.swift */,
+				DF635874299AA6FE009AB48E /* SetRowView.swift */,
+				43B0811D29957FB100597E2E /* SF Pro Display Black.ttf */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,13 +225,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEBC93A2996C4A600AA5703 /* SetsService.swift in Sources */,
 				DFDF8ABE298D8AEC00438478 /* ThemeModel.swift in Sources */,
+				DF635873299AA648009AB48E /* OneSetView.swift in Sources */,
 				DFEB266429943ACE0087311A /* ThemeRowView.swift in Sources */,
 				DF3BD2F62992D4FB006D5E9D /* SubthemesService.swift in Sources */,
 				DFE56FEA29916B37009E367C /* HomeViewModel.swift in Sources */,
+				DFEBC93C2996C77F00AA5703 /* SetsView.swift in Sources */,
 				DFDF8AC0298D9DB800438478 /* SubthemeModel.swift in Sources */,
 				DFDF8AC3298D9E7200438478 /* SetModel.swift in Sources */,
 				DFEAAEED298AFC2E00A98B8A /* HomeView.swift in Sources */,
+				DF635875299AA6FE009AB48E /* SetRowView.swift in Sources */,
 				DFFF178A2992BF0B002B8760 /* SubthemeView.swift in Sources */,
 				DFEAAEEB298AFC2E00A98B8A /* NanoAPIApp.swift in Sources */,
 				43456AC62996C1A500208E77 /* SubthemeRowView.swift in Sources */,
@@ -353,7 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = V32Q5HA7F8;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NanoAPI/Info.plist;
@@ -384,7 +401,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoAPI/Preview Content\"";
-				DEVELOPMENT_TEAM = V32Q5HA7F8;
+				DEVELOPMENT_TEAM = RRUDNBUBWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NanoAPI/Info.plist;

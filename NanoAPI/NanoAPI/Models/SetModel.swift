@@ -7,106 +7,104 @@
 
 import Foundation
 
-// infos Brickset API
+// MARK: - Classes da API
 /*
  
- {
-     "setID": 7522,
-     "number": "0012",
-     "numberVariant": 1,
-     "name": "Space minifigures",
-     "year": 1979,
-     "theme": "Space",
-     "themeGroup": "Action/Adventure",
-     "subtheme": "Minifigure Pack",
-     "category": "Normal",
-     "released": true,
-     "pieces": 4,
-     "minifigs": 2,
-     "image": {
-       "thumbnailURL": "https://images.brickset.com/sets/small/0012-1.jpg",
-       "imageURL": "https://images.brickset.com/sets/images/0012-1.jpg"
-     },
-     "bricksetURL": "https://brickset.com/sets/0012-1",
-     "collection": {},
-     "collections": {
-       "ownedBy": 117,
-       "wantedBy": 400
-     },
-     "LEGOCom": {
-       "US": {},
-       "UK": {},
-       "CA": {},
-       "DE": {}
-     },
-     "rating": 0.0,
-     "reviewCount": 1,
-     "packagingType": "{Not specified}",
-     "availability": "{Not specified}",
-     "instructionsCount": 0,
-     "additionalImageCount": 0,
-     "ageRange": {},
-     "dimensions": {},
-     "barcode": {},
-     "extendedData": {},
-     "lastUpdated": "2021-04-18T10:55:38.15Z"
-   }
- 
- */
+ Class sets
+     Public setID As Integer
+     Public number As String
+     Public numberVariant As Integer
+     Public name As String
+     Public year As Integer
+     Public theme As String
+     Public themeGroup As String
+     Public subtheme As String
+     Public category As String
+     Public released As Boolean
+     Public pieces As Integer?
+     Public minifigs As Integer?
+     Public image As New image
+     Public bricksetURL As String
+     Public collection As New collection
+     Public collections As New collections
+     Public LEGOCom As New LEGOCom
+     Public rating As Single
+     Public reviewCount As integer
+     Public packagingType As String
+     Public availability As String
+     Public instructionsCount As Integer
+     Public additionalImageCount As Integer
+     Public ageRange As New ageRange
+     Public dimensions As New dimensions
+     Public barcode As New barcodes
+     Public extendedData As New extendedData
+     Public lastUpdated As DateTime
+ End Class
 
-// MARK: - Meu modelo
-/*
- 
-struct SetModel: Identifiable, Codable {
-    let id: Int
-    let number, numberVariant: Int
-    let name: String
-    let year: Int
-    let theme, themeGroup, subtheme, category: String
-    let released: Bool
-    let pieces, minifigs: Int
-    let image: image
-    let bricksetURL: String
-    // let collection
-    let collections: collections
-    let LEGOCom: [countryPrice]
-    let rating: Double
-    let reviewCount: Int
-    let packagingType, availability: String
-    let instructionsCount, additionalImageCount: Int
-    let ageRange: ageRange
-    let dimensions: dimensions
-    
-}
+ Class LEGOCom
+     Public US As New LEGOComDetails
+     Public UK As New LEGOComDetails
+     Public CA As New LEGOComDetails
+     Public DE As New LEGOComDetails
+ End Class
 
-struct image {
-    let thumbnailURL, imageURL: String
-}
+ Class LEGOComDetails
+     Public retailPrice As Decimal?
+     Public dateFirstAvailable As DateTime?
+     Public dateLastAvailable As DateTime?
+ End Class
 
-struct collections {
-    let ownedBy, wantedBy: Int
-}
+ Class dimensions
+     Public height As Single?
+     Public width As Single?
+     Public depth As Single?
+     Public weight As Single?
+ End Class
 
-struct countryPrice {
-    let retailPrice: Double
-    let dateFirstAvailable: String
-}
+ Class extendedData
+     Public notes As String
+     Public tags() As String
+     Public description As String
+ End Class
 
-struct ageRange {
-    let min, max: Int?
-}
+ Class collection
+     Public owned As Boolean?
+     Public wanted As Boolean?
+     Public qtyOwned As Integer?
+     Public rating As Integer?
+     Public notes As String
+ End Class
 
-struct dimensions {
-    let height, width, depth: Double?
-}
+ Class collections
+     Public ownedBy As Integer?
+     Public wantedBy As Integer?
+ End Class
 
-struct barcode {
-    
-}
+ Class barcodes
+     Public EAN As String
+     Public UPC As String
+ End Class
+
+ Class ageRange
+     Public min As Integer?
+     Public max As Integer?
+ End Class
+
+ Class image
+     Public thumbnailURL As String
+     Public imageURL As String
+ End Class
+
 
 */
 
-// MARK: - Modelo do site
+struct SetResponse: Codable {
+    let status: String
+    let matches: Int
+    let sets: [SetModel]
+}
+
+// MARK: - Modelo
 struct SetModel: Identifiable, Codable {
     let id: Int
     let number: String
@@ -115,10 +113,11 @@ struct SetModel: Identifiable, Codable {
     let year: Int
     let theme: String
     let themeGroup: String
-    let subtheme: String
-    let category: Category
+    let subtheme: String?
+    let category: String
     let released: Bool
-    let pieces: Int
+    let pieces: Int?
+    let minifigs: Int?
     let image: SetImage
     let bricksetUrl: String
     let collection: Collection
@@ -126,15 +125,14 @@ struct SetModel: Identifiable, Codable {
     let legoCom: LEGOCom
     let rating: Double
     let reviewCount: Int
-    let packagingType: PackagingType
-    let availability: Availability
+    let packagingType: String
+    let availability: String
     let instructionsCount, additionalImageCount: Int
     let ageRange: AgeRange
     let dimensions: SetDimensions
     let barcode: Barcode
-    let extendedData: Collection
+    let extendedData: ExtendedData?
     let lastUpdated: String
-    let minifigs: Int?
 
     enum CodingKeys: String, CodingKey {
         case id = "setID"
@@ -151,12 +149,12 @@ struct AgeRange: Codable {
     let min, max: Int?
 }
 
-enum Availability: String, Codable {
-    case legoExclusive = "LEGO exclusive"
-    case notSpecified = "{Not specified}"
-    case promotional = "Promotional"
-    case retail = "Retail"
-}
+//enum Availability: String, Codable {
+//    case legoExclusive = "LEGO exclusive"
+//    case notSpecified = "{Not specified}"
+//    case promotional = "Promotional"
+//    case retail = "Retail"
+//}
 
 // MARK: - Barcode
 struct Barcode: Codable {
@@ -168,12 +166,17 @@ struct Barcode: Codable {
     }
 }
 
-enum Category: String, Codable {
-    case normal = "Normal"
-}
+//enum Category: String, Codable {
+//    case normal = "Normal"
+//}
 
 // MARK: - Collection
 struct Collection: Codable {
+    let owned: Bool?
+    let wanted: Bool?
+    let qtyOwned: Int?
+    let rating: Int?
+    let notes: String?
 }
 
 // MARK: - Collections
@@ -199,8 +202,7 @@ struct SetImage: Codable {
 
 // MARK: - LEGOCom
 struct LEGOCom: Codable {
-    let us, uk, ca: CA
-    let de: Collection
+    let us, uk, ca, de: LegoComDetails
 
     enum CodingKeys: String, CodingKey {
         case us = "US"
@@ -211,17 +213,29 @@ struct LEGOCom: Codable {
 }
 
 // MARK: - CA
-struct CA: Codable {
+struct LegoComDetails: Codable {
     let retailPrice: Double?
-    let dateFirstAvailable, dateLastAvailable: Date?
+    let dateFirstAvailable, dateLastAvailable: String?
 }
 
-enum PackagingType: String, Codable {
-    case blisterPack = "Blister pack"
-    case box = "Box"
-    case notSpecified = "{Not specified}"
-    case polybag = "Polybag"
+struct ExtendedData: Codable {
+    let notes: String?
+    let tags: String?
+    let description: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case notes
+        case tags = "tags()"
+        case description
+    }
 }
+
+//enum PackagingType: String, Codable {
+//    case blisterPack = "Blister pack"
+//    case box = "Box"
+//    case notSpecified = "{Not specified}"
+//    case polybag = "Polybag"
+//}
 
 //enum Theme: String, Codable {
 //    case starWars = "Star Wars"
@@ -231,4 +245,4 @@ enum PackagingType: String, Codable {
 //    case licensed = "Licensed"
 //}
 
-typealias Welcome = [SetModel]
+//typealias Welcome = [SetModel]
