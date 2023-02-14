@@ -37,6 +37,5 @@ class SubthemesService {
             }
         }
         task.resume()
-        print(self.subtemas)
     }
 }

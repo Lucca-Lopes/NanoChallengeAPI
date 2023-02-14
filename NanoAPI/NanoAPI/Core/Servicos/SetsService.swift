@@ -11,17 +11,17 @@ import Combine
 class SetsService {
     
     @Published var sets: [SetModel] = []
-    let userDefaults = PrefsUserDefaults()
+    let keyUsageService = KeyUsageService()
     var responseSubscription: AnyCancellable?
     
     public func getSets(nomeTema: String, nomeSubtema: String) {
-        guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? [String] else { return }
+        keyUsageService.apiKeyCheck()
         var urlComponents = URLComponents()
         
         urlComponents.scheme = "https"
         urlComponents.host = "brickset.com"
         urlComponents.path = "/api/v3.asmx/getSets"
-        urlComponents.queryItems = [URLQueryItem(name: "apiKey", value: apiKey[userDefaults.numUsosDaKey]), URLQueryItem(name: "userHash", value: ""), URLQueryItem(name: "params", value: "{'theme':'\(nomeTema)', 'subtheme':'\(nomeSubtema)'}")]
+        urlComponents.queryItems = [URLQueryItem(name: "apiKey", value: keyUsageService.apiKey), URLQueryItem(name: "userHash", value: ""), URLQueryItem(name: "params", value: "{'theme':'\(nomeTema)', 'subtheme':'\(nomeSubtema)'}")]
         
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { [weak self] data, _, error in
             guard let data = data, error == nil else { return }
