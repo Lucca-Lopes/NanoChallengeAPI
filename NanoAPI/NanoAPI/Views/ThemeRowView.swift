@@ -19,7 +19,7 @@ struct ThemeRowView: View {
                 Image(vm.temasImagens.randomElement() ?? "greenTemas")
                     .resizable()
                     .frame(width: 139.5, height: 100.5)
-                    .shadow(color: .gray, radius: 3, x: 3, y: 3)
+                    .shadow(color: Color("sombra"), radius: 3, x: 3, y: 3)
                 Text(tema.theme)
                     .bold()
                     .frame(width: 137)

@@ -22,7 +22,7 @@ struct SetRowView: View {
                     Image(setsImagens.randomElement() ?? "greenSets")
                         .resizable()
                         .frame(width: 70.85, height: 100.5)
-                        .shadow(color: .gray, radius: 3, x: 3, y: 3)
+                        .shadow(color: Color("sombra"), radius: 3, x: 3, y: 3)
                     AsyncImage(url: URL(string: set.image.thumbnailUrl)){ image in image
                         .resizable() } placeholder: { Color.green }
                         .frame(width: 60, height: 60)

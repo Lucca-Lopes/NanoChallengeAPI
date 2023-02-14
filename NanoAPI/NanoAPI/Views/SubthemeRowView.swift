@@ -19,7 +19,7 @@ struct SubthemeRowView: View {
                 Image(vm.subtemasImagens.randomElement() ?? "greenSubtemas")
                     .resizable()
                     .frame(width: 277.5, height: 100.5)
-                    .shadow(color: .gray, radius: 3, x: 3, y: 3)
+                    .shadow(color: Color("sombra"), radius: 3, x: 3, y: 3)
                 Text(subtema.subtheme != "{None}" ? subtema.subtheme : "Não classificado")
                     .bold()
                     .frame(width: 275)
