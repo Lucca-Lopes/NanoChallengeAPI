@@ -41,7 +41,7 @@ struct OneSetView: View {
                 SetDescriptionRow(texto: "Máxima", informacao: set.ageRange.max != nil ? String(set.ageRange.max!) : "Não especificado")
             }
             Section(header: Text("Relatório de vendas")){
-                SetDescriptionRow(texto: "Quantia vendida", informacao: String(set.collections.ownedBy ?? 0))
+                SetDescriptionRow(texto: "Quantidade vendida", informacao: String(set.collections.ownedBy ?? 0))
                 SetDescriptionRow(texto: "Nota de 0 a 5", informacao: String(format: "%.2f", locale: Locale(identifier: "br"), set.rating))
                 SetDescriptionRow(texto: "Número de avaliações", informacao: String(set.reviewCount))
             }
@@ -53,10 +53,10 @@ struct OneSetView: View {
             }
             Section(header: Text("Informações da caixa")){
                 SetDescriptionRow(texto: "Tipo", informacao: String(set.packagingType != "{Not specified}" ? set.packagingType : "Não especificado"))
-                SetDescriptionRow(texto: "Altura", informacao: set.dimensions.height != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.height!) : "Não especificado")
-                SetDescriptionRow(texto: "Comprimento", informacao: set.dimensions.width != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.width!) : "Não especificado")
-                SetDescriptionRow(texto: "Profundidade", informacao: set.dimensions.depth != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.depth!) : "Não especificado")
-                SetDescriptionRow(texto: "Peso líquido", informacao: set.dimensions.weight != nil ? String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.weight!) : "Não especificado")
+                SetDescriptionRow(texto: "Altura", informacao: set.dimensions.height != nil ? "\(String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.height!)) cm" : "Não especificado")
+                SetDescriptionRow(texto: "Comprimento", informacao: set.dimensions.width != nil ? "\(String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.width!)) cm" : "Não especificado")
+                SetDescriptionRow(texto: "Profundidade", informacao: set.dimensions.depth != nil ? "\(String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.depth!)) cm" : "Não especificado")
+                SetDescriptionRow(texto: "Peso líquido", informacao: set.dimensions.weight != nil ? "\(String(format: "%.2f", locale: Locale(identifier: "br"), set.dimensions.weight!)) kg" : "Não especificado")
             }
             .navigationBarTitleDisplayMode(.large)
             .navigationTitle(set.name != "{None}" ? set.name : "Não classificado")
@@ -77,9 +77,3 @@ struct SetDescriptionRow: View {
         }
     }
 }
-
-//struct OneSetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OneSetView()
-//    }
-//}

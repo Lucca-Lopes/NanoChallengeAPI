@@ -17,13 +17,14 @@ class SubthemesService {
     public func getSubthemes(nomeTema: String) {
         guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String else { return }
         
-        guard let url = URL(string: "https://brickset.com/api/v3.asmx/getSubthemes?apiKey=\(apiKey)&theme=\(nomeTema)") else { return }
+        var urlComponents = URLComponents()
         
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "GET"
-//        request.setValue("", forHTTPHeaderField: "")
+        urlComponents.scheme = "https"
+        urlComponents.host = "brickset.com"
+        urlComponents.path = "/api/v3.asmx/getSubthemes"
+        urlComponents.queryItems = [URLQueryItem(name: "apiKey", value: apiKey), URLQueryItem(name: "theme", value: nomeTema)]
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { [weak self] data, _, error in
+        let task = URLSession.shared.dataTask(with: URLRequest(url: urlComponents.url!)) { [weak self] data, _, error in
             guard let data = data, error == nil else { return }
             do {
                 let result = try JSONDecoder().decode(SubthemeResponse.self, from: data)
@@ -36,28 +37,6 @@ class SubthemesService {
             }
         }
         task.resume()
-        
-//        responseSubscription = URLSession.shared.dataTaskPublisher(for: url)
-//            .subscribe(on: DispatchQueue.global(qos: .default))
-//            .tryMap { (output) -> Data in
-//                guard let response = output.response as? HTTPURLResponse,
-//                      response.statusCode >= 200 && response.statusCode < 300 else {
-//                    throw URLError(.badServerResponse)
-//                }
-//                return output.data
-//            }
-//            .receive(on: DispatchQueue.main)
-//            .decode(type: SubthemeResponse.self, decoder: JSONDecoder())
-//            .sink { (completion) in
-//                switch completion {
-//                case .finished:
-//                    break
-//                case .failure(let error):
-//                    print(String(describing: error))
-//                }
-//            } receiveValue: { [weak self] (returnedResponses) in
-//                self?.subtemas = returnedResponses.subthemes
-//                self?.responseSubscription?.cancel()
-//            }
+        print(self.subtemas)
     }
 }

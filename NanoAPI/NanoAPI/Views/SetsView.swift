@@ -52,9 +52,3 @@ struct SetsView: View {
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Procurar Set")
     }
 }
-
-//struct SetsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SetsView()
-//    }
-//}

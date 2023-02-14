@@ -34,9 +34,3 @@ struct HomeView: View {
         .searchable(text: $searchText, prompt: "Procurar Tema")
     }
 }
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}

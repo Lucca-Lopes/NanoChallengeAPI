@@ -53,9 +53,3 @@ struct SubthemeView: View {
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Procurar Subtema")
     }
 }
-
-//struct SubthemeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SubthemeView()
-//    }
-//}

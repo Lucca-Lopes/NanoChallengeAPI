@@ -149,13 +149,6 @@ struct AgeRange: Codable {
     let min, max: Int?
 }
 
-//enum Availability: String, Codable {
-//    case legoExclusive = "LEGO exclusive"
-//    case notSpecified = "{Not specified}"
-//    case promotional = "Promotional"
-//    case retail = "Retail"
-//}
-
 // MARK: - Barcode
 struct Barcode: Codable {
     let ean, upc: String?
@@ -166,9 +159,6 @@ struct Barcode: Codable {
     }
 }
 
-//enum Category: String, Codable {
-//    case normal = "Normal"
-//}
 
 // MARK: - Collection
 struct Collection: Codable {
@@ -229,20 +219,3 @@ struct ExtendedData: Codable {
         case description
     }
 }
-
-//enum PackagingType: String, Codable {
-//    case blisterPack = "Blister pack"
-//    case box = "Box"
-//    case notSpecified = "{Not specified}"
-//    case polybag = "Polybag"
-//}
-
-//enum Theme: String, Codable {
-//    case starWars = "Star Wars"
-//}
-//
-//enum ThemeGroup: String, Codable {
-//    case licensed = "Licensed"
-//}
-
-//typealias Welcome = [SetModel]

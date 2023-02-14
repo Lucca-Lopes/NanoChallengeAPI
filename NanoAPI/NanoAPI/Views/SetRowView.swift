@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SetRowView: View {
-//    @ObservedObject var vm: HomeViewModel
     var set: SetModel
     let setsImagens: [String] = ["blueSets", "greenSets", "redSets", "orangeSets"]
     let subtemasImagens: [String] = ["blueSubtemas", "greenSubtemas", "redSubtemas", "orangeSubtemas"]
@@ -47,9 +46,3 @@ struct SetRowView: View {
         }
     }
 }
-
-//struct SetRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SetRowView()
-//    }
-//}

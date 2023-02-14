@@ -54,12 +54,4 @@ class HomeViewModel: ObservableObject {
     public func getSets(nomeTema: String, nomeSubtema: String) {
         setService.getSets(nomeTema: nomeTema, nomeSubtema: nomeSubtema)
     }
-    
-//    public func getThemesNames() -> [String] {
-//            var nomesTemas: [String] = []
-//            for tema in temas {
-//                nomesTemas.append(tema.theme)
-//            }
-//            return nomesTemas
-//    }
 }

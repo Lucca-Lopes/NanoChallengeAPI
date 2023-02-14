@@ -10,7 +10,6 @@ import Combine
 
 class ThemesService {
     
-//    @Published var resposta: Response?
     @Published var temas: [ThemeModel] = []
     
     var responseSubscription: AnyCancellable?
