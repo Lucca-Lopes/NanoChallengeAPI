@@ -16,7 +16,6 @@ class SetsService {
     
     public func getSets(nomeTema: String, nomeSubtema: String) {
         guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? [String] else { return }
-        print(apiKey)
         var urlComponents = URLComponents()
         
         urlComponents.scheme = "https"
@@ -37,6 +36,5 @@ class SetsService {
             }
         }
         task.resume()
-        print(self.sets)
     }
 }

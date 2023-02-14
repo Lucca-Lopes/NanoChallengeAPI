@@ -23,7 +23,7 @@ struct SetRowView: View {
                         .resizable()
                         .frame(width: 70.85, height: 100.5)
                         .shadow(color: Color("sombra"), radius: 3, x: 3, y: 3)
-                    AsyncImage(url: URL(string: set.image.thumbnailUrl)){ image in image
+                    AsyncImage(url: URL(string: set.image.thumbnailUrl ?? "nil")){ image in image
                         .resizable() } placeholder: { Color.green }
                         .frame(width: 60, height: 60)
                         .clipShape(RoundedRectangle(cornerRadius: 10))

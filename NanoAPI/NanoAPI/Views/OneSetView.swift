@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OneSetView: View {
     var set: SetModel
-    
+    @State var tamanhoImagem: CGFloat = 164
     let numFormatacao: NumberFormatter = {
         let numero = NumberFormatter()
         numero.decimalSeparator = ","
@@ -18,14 +18,22 @@ struct OneSetView: View {
     
     var body: some View {
         List{
-            AsyncImage(url: URL(string: set.image.imageUrl)){ image in image
+            AsyncImage(url: URL(string: set.image.imageUrl ?? "nil")){ image in image
                 .resizable() } placeholder: { Color.yellow }
-                .frame(width: 164, height: 164)
+                .frame(width: tamanhoImagem, height: tamanhoImagem)
                 .clipShape(RoundedRectangle(cornerRadius: 5))
                 .background(RoundedRectangle(cornerRadius: 5) .fill(Color(uiColor: .systemYellow)) .frame(width: 193, height: 193))
                 .padding()
                 .padding(.horizontal, UIScreen.main.bounds.size.width * 0.5)
                 .listRowBackground(Color.clear)
+                .onTapGesture(count: 2) {
+                    if tamanhoImagem == 164 {
+                        self.tamanhoImagem = 350
+                    }
+                    else {
+                        tamanhoImagem = 164
+                    }
+                }
             Section(header: Text("\(set.theme) > \(set.subtheme ?? "") > \(set.name) \n\nDescrição do Produto")){
                 SetDescriptionRow(texto: "Nome", informacao: set.name)
                 SetDescriptionRow(texto: "Número de variações", informacao: String(set.numberVariant))

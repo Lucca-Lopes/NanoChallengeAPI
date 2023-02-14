@@ -182,7 +182,7 @@ struct SetDimensions: Codable {
 
 // MARK: - Image
 struct SetImage: Codable {
-    let thumbnailUrl, imageUrl: String
+    let thumbnailUrl, imageUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case thumbnailUrl = "thumbnailURL"
