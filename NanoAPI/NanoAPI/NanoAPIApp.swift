@@ -17,7 +17,6 @@ struct NanoAPIApp: App {
             NavigationView {
                 HomeView(vm: vm)
             }
-//            .environmentObject(vm)
         }
     }
 }
