@@ -25,20 +25,23 @@ struct SetsView: View {
     var body: some View {
         Divider()
         ScrollView {
-            LazyVStack {
-                Text("""
-                     Sets: \(subtema.setCount)
-                     Ano: \(String(subtema.yearFrom))
-                     Última Atualização: \(String(subtema.yearTo))
-                     """)
+            LazyVStack {                
+                VStack{
+                    Text("Sets: \(subtema.setCount)")
+                        .frame(width: screenWidth*0.91, alignment: .leading)
+                    Divider()
+                    Text("Ano: \(String(subtema.yearFrom))")
+                        .frame(width: screenWidth*0.91, alignment: .leading)
+                    Divider()
+                    Text("Última Atualização: \(String(subtema.yearTo))")
+                        .frame(width: screenWidth*0.91, alignment: .leading)
+                }
                 .lineSpacing(3)
                 .padding()
-                .font(.system(size: 13))
-                .frame(width: screenWidth * 0.8, alignment: .leading)
                 .background{
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(Color(uiColor: .systemGray5))
-                        .frame(width: screenWidth * 0.8)
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color(.systemGray6))
+                        .frame(width: screenWidth*0.99)
                 }
                 
                 Spacer(minLength: 30)

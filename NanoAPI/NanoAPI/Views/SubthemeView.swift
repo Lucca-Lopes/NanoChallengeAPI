@@ -23,22 +23,25 @@ struct SubthemeView: View {
     
     var body: some View {
         Divider()
-
+        
         ScrollView {
             LazyVStack {
-                Text("""
-                     Subtemas: \(tema.subthemeCount)
-                     Ano: \(String(tema.yearFrom))
-                     Última Atualização: \(String(tema.yearTo))
-                     """)
+                VStack{
+                    Text("Subtemas: \(tema.subthemeCount)")
+                        .frame(width: screenWidth*0.91, alignment: .leading)
+                    Divider()
+                    Text("Ano: \(String(tema.yearFrom))")
+                        .frame(width: screenWidth*0.91, alignment: .leading)
+                    Divider()
+                    Text("Última Atualização: \(String(tema.yearTo))")
+                        .frame(width: screenWidth*0.91, alignment: .leading)
+                }
                 .lineSpacing(3)
                 .padding()
-                .font(.system(size: 13))
-                .frame(width: screenWidth * 0.8, alignment: .leading)
                 .background{
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(Color(uiColor: .systemGray5))
-                        .frame(width: screenWidth * 0.8)
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color(.systemGray6))
+                        .frame(width: screenWidth*0.99)
                 }
                 
                 Spacer(minLength: 30)

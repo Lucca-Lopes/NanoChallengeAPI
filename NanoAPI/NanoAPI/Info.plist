@@ -9,6 +9,11 @@
 		<string>$(API_KEY3)</string>
 		<string>$(API_KEY4)</string>
 		<string>$(API_KEY5)</string>
+		<string>$(API_KEY6)</string>
+		<string>$(API_KEY7)</string>
+		<string>$(API_KEY8)</string>
+		<string>$(API_KEY9)</string>
+		<string>$(API_KEY10)</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
