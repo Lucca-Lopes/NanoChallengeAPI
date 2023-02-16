@@ -20,7 +20,7 @@ struct OneSetView: View {
         List{
             AsyncImage(url: URL(string: set.image.imageUrl ?? "nil")){ image in image
                 .resizable() } placeholder: { Color.yellow }
-                .frame(width: tamanhoImagem, height: tamanhoImagem)
+                .frame(width: tamanhoImagem, height: tamanhoImagem, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 5))
                 .background(RoundedRectangle(cornerRadius: 5) .fill(Color(uiColor: .systemYellow)) .frame(width: 193, height: 193))
                 .padding()

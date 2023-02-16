@@ -11,10 +11,12 @@ import Combine
 class SubthemesService {
     
     @Published var subtemas: [SubthemeModel] = []
+//    @Published var carregandoSubtemas: Bool = false
     
     var responseSubscription: AnyCancellable?
     
     public func getSubthemes(nomeTema: String) {
+//        carregandoSubtemas = true
         guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? [String] else { return }
         
         var urlComponents = URLComponents()
@@ -35,8 +37,9 @@ class SubthemesService {
             catch {
                 print(error.localizedDescription)
             }
+//            self?.carregandoSubtemas = false
         }
+//        self.carregandoSubtemas = false
         task.resume()
-        print(self.subtemas)
     }
 }

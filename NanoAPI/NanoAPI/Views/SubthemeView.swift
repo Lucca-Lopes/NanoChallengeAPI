@@ -46,9 +46,15 @@ struct SubthemeView: View {
                 
                 Spacer(minLength: 30)
                 
-                ForEach(subtemas, id: \.subtheme) { subtema in
-                    SubthemeRowView(vm: vm, subtema: subtema)
+                if vm.carregandoSubtemas {
+                    ProgressView()
                 }
+                else {
+                    ForEach(subtemas, id: \.subtheme) { subtema in
+                        SubthemeRowView(vm: vm, subtema: subtema)
+                    }
+                }
+                
             }
         }
         .navigationBarTitleDisplayMode(.large)

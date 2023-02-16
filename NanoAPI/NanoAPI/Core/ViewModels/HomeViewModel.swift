@@ -13,6 +13,8 @@ class HomeViewModel: ObservableObject {
     @Published var temas: [ThemeModel] = []
     @Published var subtemas: [SubthemeModel] = []
     @Published var sets: [SetModel] = []
+    @Published var carregandoSubtemas: Bool = false
+    @Published var carregandoSets: Bool = false
     
     public let temasImagens: [String] = ["blueTemas", "greenTemas", "redTemas", "yellowTemas", "orangeTemas"]
     public let subtemasImagens: [String] = ["blueSubtemas", "greenSubtemas", "redSubtemas", "orangeSubtemas"]
@@ -40,11 +42,23 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancelaveis)
         
+//        subthemesService.$carregandoSubtemas
+//            .sink { [weak self] (returnedCarregandoSubtemas) in
+//                self?.carregandoSubtemas = returnedCarregandoSubtemas
+//            }
+//            .store(in: &cancelaveis)
+        
         setService.$sets
             .sink { [weak self] (returnedSets) in
                 self?.sets = returnedSets
             }
             .store(in: &cancelaveis)
+        
+//        setService.$carregandoSets
+//            .sink { [weak self] (returnedCarregandoSets) in
+//                self?.carregandoSets = returnedCarregandoSets
+//            }
+//            .store(in: &cancelaveis)
     }
     
     public func getSubthemes(nomeTema: String) {

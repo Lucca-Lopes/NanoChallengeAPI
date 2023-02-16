@@ -11,10 +11,12 @@ import Combine
 class SetsService {
     
     @Published var sets: [SetModel] = []
+//    @Published var carregandoSets: Bool = false
     let keyUsageService = KeyUsageService()
     var responseSubscription: AnyCancellable?
     
     public func getSets(nomeTema: String, nomeSubtema: String) {
+//        carregandoSets = true
         keyUsageService.apiKeyCheck()
         var urlComponents = URLComponents()
         
@@ -34,7 +36,9 @@ class SetsService {
             catch {
                 print(error)
             }
+//            self?.carregandoSets = false
         }
         task.resume()
+        
     }
 }

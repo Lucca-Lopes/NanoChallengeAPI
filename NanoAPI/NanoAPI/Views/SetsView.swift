@@ -45,9 +45,16 @@ struct SetsView: View {
                 }
                 
                 Spacer(minLength: 30)
-                ForEach(sets, id: \.id) { set in
-                    SetRowView(set: set)
+                
+                if vm.carregandoSets {
+                    ProgressView()
                 }
+                else {
+                    ForEach(sets, id: \.id) { set in
+                        SetRowView(set: set)
+                    }
+                }
+                
             }
         }
         .navigationBarTitleDisplayMode(.large)
