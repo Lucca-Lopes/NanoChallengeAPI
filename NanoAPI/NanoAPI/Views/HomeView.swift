@@ -16,7 +16,7 @@ struct HomeView: View {
         if searchText.isEmpty{
             return vm.temas
         }else{
-            return vm.temas.filter { $0.theme.contains(searchText)}
+            return vm.temas.filter { $0.theme.localizedCaseInsensitiveContains(searchText)}
         }
     }
             

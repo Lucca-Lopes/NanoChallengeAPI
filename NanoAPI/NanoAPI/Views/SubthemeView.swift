@@ -16,7 +16,7 @@ struct SubthemeView: View {
         if searchText.isEmpty{
             return vm.subtemas
         }else{
-            return vm.subtemas.filter { $0.subtheme.contains(searchText)}
+            return vm.subtemas.filter { $0.subtheme.localizedCaseInsensitiveContains(searchText)}
         }
     }
     let screenWidth = UIScreen.main.bounds.size.width

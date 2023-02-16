@@ -16,7 +16,7 @@ struct SetsView: View {
         if searchText.isEmpty{
             return vm.sets
         }else{
-            return vm.sets.filter { $0.name.contains(searchText)}
+            return vm.sets.filter { $0.name.localizedCaseInsensitiveContains(searchText)}
         }
     }
     
